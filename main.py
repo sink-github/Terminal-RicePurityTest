@@ -1,5 +1,5 @@
 questions = [
-    "Held hands romantically?",
+    "Held hands romantically?\n",
     "Been on a date?",
     "Been in a relationship?",
     "Danced without leaving room for Jesus?",
@@ -100,16 +100,24 @@ questions = [
     "Committed an act of incest?",
     "Engaged in bestiality?",
 ]
+
+
+def colored(r, g, b, text):
+    return "\033[38;2;{};{};{}m{} \033[38;2;255;255;255m".format(r, g, b, text)
+
+
 finished = 0
 score = 100
 cancelled = False
-print("The Purity Test has historically served as a segue from O-week to true college life at Rice" +
-      "It's a voluntary opportunity for O-week groups to bond, and for students to track the maturation" +
-      "of their experiences throughout college.")
-print("Caution: This is not a bucket list. Completion of all items on this test will likely result in death.")
-print("Click on every item you have done. MPS stands for Member of the Preferred Sex.")
+print(colored(0, 128, 0,
+              "The Purity Test has historically served as a segue from O-week to true college life at Rice.\n" +
+              "It's a voluntary opportunity for O-week groups to bond, and for students to track the maturation.\n" +
+              "of their experiences throughout college.\n\n"))
+print(colored(0, 128, 0, "Caution: This is not a bucket list. Completion of all items on this test will likely result "
+                         "in death.\n"))
+print(colored(0, 128, 0, "Click on every item you have done. MPS stands for Member of the Preferred Sex.\n"))
 print("   ")
-print("Please write \"y\" to check the prompt. Otherwise, write \"n\" to continue.")
+print(colored(0, 128, 0, "Please write \"y\" to check the prompt. Otherwise, write \"n\" to continue."))
 while finished < 100 and cancelled is False:
     prompt = input(questions[finished] + ": ")
     if prompt.lower() == "yes" or prompt.lower() == "y":
