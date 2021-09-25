@@ -1,6 +1,6 @@
 # Terminal-RicePurityScore
 
-**This was tested on Python 3.9**
+**This was tested on Python 3.9.**
 
 ## What does this do?
 > This uses **Python** to replicate the [Rice Purity Test Score Site](http://ricepuritytest.com) as a terminal.
